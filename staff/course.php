@@ -8,7 +8,7 @@ if (isset($_POST["submit"])) {
   $coursefile=$_FILES["uploadfile"]["name"];
   $tempname=$_FILES["uploadfile"]["tmp_name"];
   $folder="../staff/uploadimages/".$coursefile;
-$query="INSERT INTO coursemanagement(CLASS,SUBJECTNAME,SUBJECTAUTHOR,coursefile)
+$query="INSERT INTO coursemanagement(class,subject_name,subject_author,coursefile)
    VALUES('$CLASS','$SUBJECTNAME','$SUBJECTAUTHOR','$coursefile')" or die(mysqli_error($con));
   $result=mysqli_query($con,$query);
   if($result)

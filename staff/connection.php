@@ -1,3 +1,3 @@
 <?php
-$con=mysqli_connect("localhost","root","","tuition_mangement");
+$con=mysqli_connect("localhost","root","","tution_management");
 ?>

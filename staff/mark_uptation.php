@@ -9,7 +9,7 @@ if (isset($_POST['submit'])) {
 		$earnmark=$_POST['earnmark'][$id];
 		$totalmark=$_POST['totalmark'][$id];
 		$SUBJECTS=$_POST['SUBJECTS'];
-		$result=mysqli_query($con,"INSERT INTO mark_records(STUDENTID,NAME,COURSEOPTION,EARNMARK,TOTALMARK,SUBJECTS)VALUES('$student_id','$first_name','$course','$earnmark','$totalmark','$SUBJECTS')") or die(mysqli_error($con));
+		$result=mysqli_query($con,"INSERT INTO mark_records(student_id,name,course_option,earn_mark,total_mark,subjects)VALUES('$student_id','$first_name','$course','$earnmark','$totalmark','$SUBJECTS')") or die(mysqli_error($con));
 		echo($result);
 		if ($result) {
 			echo "inserted successfully";
@@ -90,7 +90,7 @@ if (isset($_POST['submit'])) {
                <label for="inputPassword3" class="col-sm-2 col-form-label">Subject</label>
                  <div class="col-sm-10">
                      <select class="form-control" name="SUBJECTS" required> 
-                        <option >--Select Subject to upload Mark--</option>
+                        <option default>--Select Subject to upload Mark--</option>
                         <option value="TAMIL">TAMIL</option>
                         <option value="ENGLISH">ENGLISH</option>
                         <option value="MATHS">MATHS</option>

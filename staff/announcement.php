@@ -5,7 +5,7 @@ include_once "connection.php";
 	$chk=implode(',',$_POST['chk']);
  	$SUBJECT=$_POST["SUBJECT"];
  	$MESSAGE=$_POST["MESSAGE"];
- 	$qry="INSERT INTO announcement(chk,SUBJECT,MESSAGE)VALUES('$chk','$SUBJECT','$MESSAGE')";
+ 	$qry="INSERT INTO announcement(chk,subject,message)VALUES('$chk','$SUBJECT','$MESSAGE')";
  	$query_run=mysqli_query($con,$qry);
  	if ($query_run) {
  		echo "inserted successfully";
@@ -54,7 +54,7 @@ include_once "connection.php";
         <form action="" method="POST">
           <div class="form-row">
               <div class="form-group col-md-3">
-                          <select class="form-control" name="COURSEOPTION" required>
+                          <select class="form-control" name="COURSEOPTION">
                             <option >--Select Course--</option>
                             <option>6th</option>
                             <option>7th</option>
@@ -69,7 +69,7 @@ include_once "connection.php";
                 OR
               </div>
               <div class="form-group col-md-3">
-                <input type="text" class="form-control" id="inputEmail4" name="STUDENTID" placeholder="Search By Id" required>
+                <input type="text" class="form-control" id="inputEmail4" name="STUDENTID" placeholder="Search By Id">
               </div>
               <div class="form-group  col-md-2">
                     <center>

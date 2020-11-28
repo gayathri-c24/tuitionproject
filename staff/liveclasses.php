@@ -6,7 +6,7 @@ if (isset($_POST['submit'])) {
 	$SUBJECT=$_POST["SUBJECT"];
 	$MEETINGLINK=$_POST["MEETINGLINK"];
 	$date=date("yy-m-d H:i:s");
-	$reg="INSERT INTO liveclass(CLASS,SUBJECT,MEETINGLINK,date)VALUES('$CLASS','$SUBJECT','$MEETINGLINK','$date')";
+	$reg="INSERT INTO liveclass(class,subject,meeting_link,date)VALUES('$CLASS','$SUBJECT','$MEETINGLINK','$date')";
 	$query_run=mysqli_query($con,$reg);
 	if($query_run)
 	{

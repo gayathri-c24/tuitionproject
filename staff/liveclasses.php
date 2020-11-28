@@ -1,6 +1,6 @@
 <?php
 include "../staff/nav.php";
-$con=mysqli_connect("localhost","root","","tuition_mangement");
+include_once "connection.php";
 if (isset($_POST['submit'])) {
   $CLASS=$_POST["CLASS"];
 	$SUBJECT=$_POST["SUBJECT"];
@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
            <div class="form-group row " >
                <label for="inputPassword3" class="col-sm-2 col-form-label">Class</label>
                  <div class="col-sm-10">
-                     <select class="form-control" name="CLASS">
+                     <select class="form-control" name="CLASS" required>
                        <option >--select--</option>
                        <option value="6TH">6th</option>
                         <option value="7TH">7th</option>
@@ -65,7 +65,7 @@ if (isset($_POST['submit'])) {
            <div class="form-group  row" >
                <label for="inputPassword3" class="col-sm-2 col-form-label">Subject</label>
                  <div class="col-sm-10">
-                     <select class="form-control" name="SUBJECT">
+                     <select class="form-control" name="SUBJECT" required>
                         <option >--select--</option>
                         <option value="TAMIL">TAMIL</option>
                         <option value="ENGLISH">ENGLISH</option>
@@ -94,13 +94,13 @@ if (isset($_POST['submit'])) {
            <div class="form-group row">
                <label for="inputPassword3" class="col-sm-2 col-form-label">Meeting Link</label>
                <div class="col-sm-10">
-                 <input type="text" class="form-control" id="inputPassword3" name="MEETINGLINK">
+                 <input type="text" class="form-control" id="inputPassword3" name="MEETINGLINK" required>
                </div>
            </div>
 
            <div class="form-group row">
                <center class="col-sm-12">
-                 <input  type="submit" name="submit" class="btn btn-primary">
+                 <input  type="submit" name="submit" class="btn btn-primary" required>
                </center>	
            </div>
            <br>
@@ -109,56 +109,6 @@ if (isset($_POST['submit'])) {
      <div class="container-footer">
      </div>
    </div>
-<!-- 
-<div class="container">
-<center><h1 style="background-color: black;color: white;">Live Classes</h1></center>	
-<form action="" method="POST" class="form-group" style="border-bottom: 4px solid black;border-right: 4px solid black;">
-<div class="check">
-<label class="min">CLASS:</label>
-<select class="form-control form-control-lg" name="CLASS">
-<option value="">select</option>
-<option value="6th">6th</option>
-<option value="7th">7th</option>
-<option value="8th">8th</option>
-<option value="9th">9th</option>
-<option value="10th">10th</option>
-<option value="11th">11th</option>
-<option value="12th">12th</option>
-<option value="NEET">NEET</option>
-<option value="JEE">JEE</option>
-</select><br>
-</div>	
-<div class="check">
-<label class="head">SUBJECT:</label>
-<select class="form-control form-control-lg" name="SUBJECT" style="height: 50px;">
-<option value="">select</option>
-<option value="TAMIL">TAMIL</option>
-<option value="ENGLISH">ENGLISH</option>
-<option value="MATHS">MATHS</option>
-<option value="SCIENCE">SCIENCE</option>
-<option value="SOCIAL">SOCIAL</option>
-<option value="COMPUTERSCIENCE">COMPUTERSCIENCE</option>
-<option value="BIO-PHYSICS">BIO-PHYSICS</option>
-<option value="BIO-CHEMISTRY">BIO-CHEMISTRY</option>
-<option value="BIO-ZOOLOGY">BIO-ZOOLOGY</option>
-<option value="BIO-BOTANY">BIO-BOTONAY</option>
-<option value="HISTORY">HISTORY</option>
-<option value="ECONOMICS">ECONOMICS</option>
-<option value="BUSINESS MATHS">BUSINESS MATHS</option>
-<option value="COMMERCE">COMMERCE</option>
-</select><br> 
-</div>
-<div>
-<label>Schedule Meeting:</label>
-<a href="https://accounts.google.com/">cilck here</a>	
-</div><br>
-<div>
-<label>Meeting link:</label>
-<input type="text" name="MEETINGLINK" class="form-control form-control-lg">	
-</div><br>
-<div class="check" style="margin-top:5px;margin-bottom: 10px;">
-<center><input type="submit" name="submit" class="btn btn-warning" ></center>	
-</div>	 -->
 </form>	
 </div>
 </body>

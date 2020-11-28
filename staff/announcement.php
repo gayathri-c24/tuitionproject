@@ -1,6 +1,6 @@
 <?php
  include "../staff/nav.php";
- $con=mysqli_connect("localhost","root","","tuition_mangement");
+include_once "connection.php";
  if (isset($_POST["submit"])) {
 	$chk=implode(',',$_POST['chk']);
  	$SUBJECT=$_POST["SUBJECT"];
@@ -54,7 +54,7 @@
         <form action="" method="POST">
           <div class="form-row">
               <div class="form-group col-md-3">
-                          <select class="form-control" name="COURSEOPTION">
+                          <select class="form-control" name="COURSEOPTION" required>
                             <option >--Select Course--</option>
                             <option>6th</option>
                             <option>7th</option>
@@ -69,11 +69,11 @@
                 OR
               </div>
               <div class="form-group col-md-3">
-                <input type="text" class="form-control" id="inputEmail4" name="STUDENTID" placeholder="Search By Id">
+                <input type="text" class="form-control" id="inputEmail4" name="STUDENTID" placeholder="Search By Id" required>
               </div>
               <div class="form-group  col-md-2">
                     <center>
-                      <input  type="submit"  name="search" Value="search" class="btn btn-primary ">
+                      <input  type="submit"  name="search" Value="search" class="btn btn-primary" required>
                     </center>	
               </div>
           </div>
@@ -87,13 +87,13 @@
           <div class="form-group row">
             <label for="inputEmail3" class="col-sm-2 col-form-label" >Subject</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputEmail3" name="SUBJECT">
+              <input type="text" class="form-control" id="inputEmail3" name="SUBJECT" required>
             </div>
           </div>
           <div class="form-group row">
             <label for="inputPassword3" class="col-sm-2 col-form-label" >Message</label>
             <div class="col-sm-10">
-              <textarea type="text" class="form-control" name="MESSAGE">
+              <textarea type="text" class="form-control" name="MESSAGE" required>
               </textarea>
             </div>
           </div>

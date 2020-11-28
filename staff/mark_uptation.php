@@ -1,6 +1,6 @@
 <?php
 include "../staff/nav.php";
-$con=mysqli_connect("localhost","root","","tuition_mangement");
+include_once "connection.php";
 if (isset($_POST['submit'])) {
 		foreach ($_POST['totalmark'] as $id => $totalmark) {
 		$student_id=$_POST["student_id"][$id];
@@ -34,13 +34,6 @@ if (isset($_POST['submit'])) {
 <link rel="stylesheet" href="../css/admission.css">
 <link rel="stylesheet" href="../css/fees.css">
 <link rel="stylesheet" href="../css/student.css">
-
-<!-- <style type="text/css">
-	table {
-  border-bottom: 1px solid black;
-  border-collapse: collapse;
-}
-</style> -->
 </head>
 <body>
 
@@ -60,7 +53,7 @@ if (isset($_POST['submit'])) {
     <div class="col-sm-2 back">
             <div class="form-group row">
                <center class="col-sm-12">
-                 <input  type="submit" name="back" value="Back" class="btn btn-primary btn1">
+                 <input  type="submit" name="back" value="Back" class="btn btn-primary btn1" required>
                </center>	
            </div>
     </div>
@@ -68,7 +61,7 @@ if (isset($_POST['submit'])) {
             <div class="form-group row " >
                       <!-- <label for="inputPassword3" class="col-sm-2 col-form-label">Class</label> -->
                  <div class="col-sm-10">
-                     <select class="form-control" name="course">
+                     <select class="form-control" name="course" required>
                        <option >--Select by Class--</option>
                        <option value="6TH">6th</option>
                         <option value="7TH">7th</option>
@@ -86,7 +79,7 @@ if (isset($_POST['submit'])) {
     <div class="col-sm-2">
          <div class="form-group row">
                <center class="col-sm-12">
-               <input type="submit" name="filter_value" class="btn btn-primary" value="filter">
+               <input type="submit" name="filter_value" class="btn btn-primary" value="filter" required>
                </center>	
            </div>
     </div>
@@ -96,7 +89,7 @@ if (isset($_POST['submit'])) {
            <div class="form-group  row" >
                <label for="inputPassword3" class="col-sm-2 col-form-label">Subject</label>
                  <div class="col-sm-10">
-                     <select class="form-control" name="SUBJECTS">
+                     <select class="form-control" name="SUBJECTS" required> 
                         <option >--Select Subject to upload Mark--</option>
                         <option value="TAMIL">TAMIL</option>
                         <option value="ENGLISH">ENGLISH</option>
@@ -162,12 +155,7 @@ if (isset($_POST['submit'])) {
 				 $counter++;
 				}
         }
-    //   }
-				// // else {
-						
-				// 		echo "no record found";
-					// }	
-				
+   
 
 			?>
 

@@ -1,6 +1,6 @@
 <?php
 include "../staff/nav.php";
-$con=mysqli_connect("localhost","root","","tuition_mangement");
+include_once "connection.php";
 if (isset($_POST["submit"])) {
   $CLASS=$_POST["CLASS"];
   $SUBJECTNAME=$_POST["SUBJECTNAME"];
@@ -8,7 +8,7 @@ if (isset($_POST["submit"])) {
   $coursefile=$_FILES["uploadfile"]["name"];
   $tempname=$_FILES["uploadfile"]["tmp_name"];
   $folder="../staff/uploadimages/".$coursefile;
-  $query="INSERT INTO coursemanagement(CLASS,SUBJECTNAME,SUBJECTAUTHOR,coursefile)
+$query="INSERT INTO coursemanagement(CLASS,SUBJECTNAME,SUBJECTAUTHOR,coursefile)
    VALUES('$CLASS','$SUBJECTNAME','$SUBJECTAUTHOR','$coursefile')" or die(mysqli_error($con));
   $result=mysqli_query($con,$query);
   if($result)
@@ -23,7 +23,7 @@ if (isset($_POST["submit"])) {
     
     $file=move_uploaded_file($tempname, $folder);
     
-    echo $file."<br>";
+    // echo $file."<br>";
       if ($file )  { 
             echo "uploaded successfully"; 
         }else{ 
@@ -63,8 +63,8 @@ if (isset($_POST["submit"])) {
            <div class="form-group row " >
                <label for="inputPassword3" class="col-sm-2 col-form-label">Class</label>
                  <div class="col-sm-10">
-                     <select class="form-control" name="CLASS">
-                       <option >--select--</option>
+                     <select class="form-control" name="CLASS" id="select01" required>
+                       <option value="" >--select--</option>
                        <option value="6TH">6th</option>
                         <option value="7TH">7th</option>
                         <option value="8TH">8th</option>
@@ -80,7 +80,7 @@ if (isset($_POST["submit"])) {
            <div class="form-group  row" >
                <label for="inputPassword3" class="col-sm-2 col-form-label">Subject</label>
                  <div class="col-sm-10">
-                     <select class="form-control" name="SUBJECTNAME">
+                     <select class="form-control" name="SUBJECTNAME" id="select02" required>
                         <option >--select--</option>
                         <option value="TAMIL">TAMIL</option>
                         <option value="ENGLISH">ENGLISH</option>
@@ -103,13 +103,13 @@ if (isset($_POST["submit"])) {
            <div class="form-group row">
                <label for="inputEmail3" class="col-sm-2 col-form-label">Subject Author:</label>
                <div class="col-sm-10">
-                 <input type="text" name="SUBJECTAUTHOR" class="form-control" id="inputEmail3">
+                 <input type="text" name="SUBJECTAUTHOR" class="form-control" id="inputEmail3" required>
                </div>
            </div>
            <div class="form-group row">
                <label for="inputEmail3" class="col-sm-2 col-form-label">Material:</label>
                <div class="col-sm-10">
-                 <input type="file" name="uploadfile" class="form-control" id="inputEmail3">
+                 <input type="file" name="uploadfile" class="form-control" id="inputEmail3" required>
                </div>
            </div>
           <div class="form-group row">
@@ -123,7 +123,5 @@ if (isset($_POST["submit"])) {
      <div class="container-footer">
      </div>
    </div>
-
-</body>
+ </body>
 </html>
- 

@@ -11,11 +11,11 @@
 </head>
 <body>
 <div class="container">
-<form class="" method="POST" action="">
-<h1 style="color:white;background-color: black;height: 60px;text-align: center;">STUDENT FEE STATUS</h1>
+<form class="" method="POST" action="" style="border-right: 4px solid black;border-bottom: 4px solid black">
+<h1 style="color:white;background-color: black;height: 60px;text-align: center;">Student Fee Status</h1>
 <input type="text" name="STUDENTID" class="form-control" placeholder="enter studentid" style="width: 200px;margin-left: 800px;height: 40px;margin-top: 20px;"><br>
-<input type="submit" name="filter_value" class="btn btn-primary" value="filter" style="margin-left: 1010px;margin-top: -120px;height: 40px;width: 90px;"><br><br>
-<table class="table table-striped" id="table_field" style="border-bottom: 1px solid black;">
+<input type="submit" name="filter_value" class="btn btn-warning" value="filter" style="margin-left: 1010px;margin-top: -120px;height: 40px;width: 90px;"><br><br>
+<table class="table table-bordered" id="table_field" style="border-bottom: 1px solid black;">
 
 		
 		<thead style="background-color: #013243;color: white;" >
@@ -32,8 +32,8 @@
 			
 			<?php
 			include "../staff/nav.php";
-			$con=mysqli_connect("localhost","root","","tuition_mangement");
-	if (isset($_POST['filter_value'])) {
+			include_once "connection.php";
+			if (isset($_POST['filter_value'])) {
 		$value=$_POST['STUDENTID'];
 		$query="SELECT fee.student_id, students.first_name, students.course,fee.FEESTATUS
 FROM fee

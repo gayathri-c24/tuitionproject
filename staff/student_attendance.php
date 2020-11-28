@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect("localhost","root","","tuition_mangement");
+include_once "connection.php";
 include "../staff/nav.php";
 if (isset($_POST['submit'])) {
 		foreach($_POST['attendence_status'] as $id=>$attendence_status)
@@ -57,14 +57,14 @@ if (isset($_POST['submit'])) {
     <div class="col-sm-1 back">
             <div class="form-group row">
                <center class="col-sm-12">
-                 <input  type="submit" name="view" value="View" class="btn btn-primary btn1">
+                 <input  type="submit" name="view" value="View" class="btn btn-primary btn1" required>
                </center>	
            </div>
     </div>&nbsp; &nbsp;
     <div class="col-sm-2 back">
             <div class="form-group row">
                <center class="col-sm-12">
-                 <input  type="submit" name="back" value="Back" class="btn btn-primary btn1">
+                 <input  type="submit" name="back" value="Back" class="btn btn-primary btn1" required>
                </center>	
            </div>
     </div>
@@ -72,7 +72,7 @@ if (isset($_POST['submit'])) {
             <div class="form-group row " >
                       <!-- <label for="inputPassword3" class="col-sm-2 col-form-label">Class</label> -->
                  <div class="col-sm-10">
-                     <select class="form-control" name="course">
+                     <select class="form-control" name="course" required>
                        <option >--Select by Class--</option>
                        <option value="6TH">6th</option>
                         <option value="7TH">7th</option>

@@ -204,18 +204,17 @@ a {
         <div class="l-navbar" id="navbar">
             <nav class="nav">
                 <div id="page-wrapper">
-                    <a href="" class="nav__logo">
-                        <img src="assets/icons/logo.svg" alt="" class="nav__logo-icon">
-                        <span class="nav__logo-text">SHINE</span>
+                 <a href="" class="nav__logo">
+                        <img src="../staff/logo.png" alt="" class="nav__logo-icon">
+                        <span class="nav__logo-text"></span>
                     </a>
-    
+
                     <div class="nav__toggle" id="nav-toggle">
                         <i class='bx bx-chevron-right'></i>
                     </div>
-    
-                    <ul class="nav__list">
+                      <ul class="nav__list">
                         <a href="course.php" class="nav__link">
-                            <i class='bx bx-grid-alt nav__icon'></i>
+                        <i class='bx bx-book-alt nav__icon'></i>
                             <span class="nav__text">COURSE 
                             MANAGEMENT</span>
 
@@ -230,25 +229,31 @@ a {
                             <span class="nav__text">ANNOUNCEMENT</span>
                         </a>
                         <a href="liveclasses.php" class="nav__link">
-                            <i class='bx bx-heart nav__icon'></i>
+                            <i class='bx bx-slideshow nav__icon'></i>
                             <span class="nav__text">LIVE<br>
                             CLASSES</span>
                         </a>
                         <a href="mark_uptation.php" class="nav__link">
-                            <i class='bx bx-bookmark nav__icon'></i>
+                            <i class='bx bx-notepad nav__icon'></i>
                               <span class="nav__text">STUDENT<br>
                                MARKS</span>
                         </a>
                         <a href="staff_fee.php" class="nav__link">
-                            <i class='bx bx-message-rounded nav__icon' ></i>
+                            <i class='bx bx-money nav__icon' ></i>
                             <span class="nav__text">FEES<br> 
                             DETAILS</span>
-                        </a>                 
-                    </ul>
+                        </a>
+                         <a href="" class="nav__link">
+                            <i class='bx bxs-report nav__icon' ></i>
+                            <span class="nav__text">Report
+                          </span>
+                        </a> 
+                        </ul>
                 </div>
-                <a href="index.php" class="nav__link">           
+               
+                <a href="register.php" class="nav__link">           
                     <i class='bx bx-log-out-circle nav__icon'></i>
-                    <span class="nav__text">Close</span>
+                    <span class="nav__text">Logout</span>
                 </a>
             </nav>
         </div>
@@ -260,4 +265,5 @@ a {
   </form>
     <!-- MAIN JS -->
     <script src="main.js"></script>
+   
 </html>   

@@ -10,13 +10,6 @@
 <link rel="stylesheet" href="../css/admission.css">
 <link rel="stylesheet" href="../css/fees.css">
 <link rel="stylesheet" href="../css/student.css">
-
-<!-- <style type="text/css">
-	table {
-  border-bottom: 1px solid black;
-  border-collapse: collapse;
-}
-</style> -->
 </head>
 <body>
 
@@ -50,7 +43,7 @@
 </thead>
 <?php
 include "../admin/admin_dashboard.php";
-$con=mysqli_connect("localhost","root","","tuition_mangement");
+include_once "connection.php";
 $query="SELECT STUDENTID,NAME,date,COURSEOPTION,attendence_status FROM student_attendance";
 $result=mysqli_query($con,$query);
 $counter=0;

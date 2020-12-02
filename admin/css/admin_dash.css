@@ -1,0 +1,15 @@
+.icon-container .icon {
+    color: rgb(11, 11, 43);
+}
+
+.icon-container .icon .nav__icon {
+    font-size: 100px;
+}
+
+.icon_text {
+    color: rgb(11, 11, 43);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+}

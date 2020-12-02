@@ -2,18 +2,18 @@
  include "../staff/nav.php";
 include_once "connection.php";
  if (isset($_POST["submit"])) {
-	$chk=implode(',',$_POST['chk']);
- 	$SUBJECT=$_POST["SUBJECT"];
- 	$MESSAGE=$_POST["MESSAGE"];
- 	$qry="INSERT INTO announcement(chk,subject,message)VALUES('$chk','$SUBJECT','$MESSAGE')";
- 	$query_run=mysqli_query($con,$qry);
- 	if ($query_run) {
- 		echo "inserted successfully";
- 	}
- 	else
- 	{
- 		echo "not inserted successfully";
- 	}
+  $chk=implode(',',$_POST['chk']);
+  $SUBJECT=$_POST["SUBJECT"];
+  $MESSAGE=$_POST["MESSAGE"];
+  $qry="INSERT INTO announcement(chk,subject,message)VALUES('$chk','$SUBJECT','$MESSAGE')";
+  $query_run=mysqli_query($con,$qry);
+  if ($query_run) {
+    echo "inserted successfully";
+  }
+  else
+  {
+    echo "not inserted successfully";
+  }
  }
 ?>
 <!DOCTYPE html>
@@ -25,10 +25,10 @@ include_once "connection.php";
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="../css/admission.css">
-<link rel="stylesheet" href="../css/fees.css">
-<link rel="stylesheet" href="../css/student.css">
-<link rel="stylesheet" href="../css/announcement.css">
+<link rel="stylesheet" href="..admin//css/admission.css">
+<link rel="stylesheet" href="../admin/css/fees.css">
+<link rel="stylesheet" href="../admin/css/student.css">
+<link rel="stylesheet" href="../admin/css/announcement.css">
 </head>
 <body>
 
@@ -74,7 +74,7 @@ include_once "connection.php";
               <div class="form-group  col-md-2">
                     <center>
                       <input  type="submit"  name="search" Value="search" class="btn btn-primary" required>
-                    </center>	
+                    </center> 
               </div>
           </div>
           <br>
@@ -100,7 +100,7 @@ include_once "connection.php";
           <div class="form-group  col-md-2">
                       <center>
                         <input  type="submit"  name="submit" Value="Submit" class="btn btn-primary ">
-                      </center>	
+                      </center> 
           </div>
           
       </form>
@@ -117,7 +117,7 @@ include_once "connection.php";
             </thead>
             <tbody>
             <?php
-            	if (isset($_POST['search'])) {
+              if (isset($_POST['search'])) {
                 $STUDENTID=$_POST['STUDENTID'];
               $COURSEOPTION=$_POST['COURSEOPTION'];
               $query="SELECT * FROM students WHERE student_id='$STUDENTID' or course='$COURSEOPTION' ";
@@ -139,7 +139,7 @@ include_once "connection.php";
               <td><?php echo $row['first_name'];?></td>
               <td><?php echo $row['last_name'];?></td>
               <td><?php echo $row['course'];?></td>
-              </tr>				
+              </tr>       
 
               <?php
               }

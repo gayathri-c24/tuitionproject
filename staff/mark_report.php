@@ -20,7 +20,7 @@ include "../staff/nav.php";
 </div>	
 <div class="panel-body">
 <form action="" method="POST">
-<select class="form-control " name="COURSEOPTION" style="width: 250px;margin-left: 710px;" required>
+<select class="form-control " name="course_option" style="width: 250px;margin-left: 710px;" required>
 <option default>select course</option>
 <option value="6th">6TH STD</option>
 <option value="7th">7TH STD</option>
@@ -32,7 +32,7 @@ include "../staff/nav.php";
 <option value="neet">NEET</option>
 <option value="jee">JEE</option>
 </select>
-<select class="form-control" name="SUBJECTS" style="width: 250px;margin-left: 400px;margin-top: -40px;"required>
+<select class="form-control" name="subjects" style="width: 250px;margin-left: 400px;margin-top: -40px;"required>
 <option default>select subject</option>
 <option value="TAMIL">TAMIL</option>
 <option value="ENGLISH">ENGLISH</option>
@@ -69,26 +69,26 @@ include "../staff/nav.php";
 		<tbody>
 			<?php
 			if (isset($_POST['filter_value'])) {
-				$COURSEOPTION=$_POST['COURSEOPTION'];
-				$SUBJECTS=$_POST['SUBJECTS'];
-				$query="SELECT * FROM mark_records WHERE COURSEOPTION='$COURSEOPTION' AND SUBJECTS='$SUBJECTS'";
+				$course_option=$_POST['course_option'];
+				$subjects=$_POST['subjects'];
+				$query="SELECT * FROM mark_records WHERE course_option='$course_option ' AND subjects='$subjects'";
 				$result=mysqli_query($con,$query);
 				$counter=0;
 				if (mysqli_num_rows($result)>0) {
 				while ($row=mysqli_fetch_array($result)) {
 					?>
 					<tr>
-					<td><?php echo $row['STUDENTID'];?>
+					<td><?php echo $row['student_id'];?>
 					</td>
-					<td><?php echo $row['NAME'];?>
+					<td><?php echo $row['name'];?>
 					</td>
-					<td><?php echo $row['COURSEOPTION'];?>
+					<td><?php echo $row['course_option'];?>
 					</td>
-					<td><?php echo $row['EARNMARK'];?>
+					<td><?php echo $row['earn_mark'];?>
 					</td>
-					<td><?php echo $row['TOTALMARK'];?>
+					<td><?php echo $row['total_mark'];?>
 					</td>
-					<td><?php echo $row['SUBJECTS'];?>
+					<td><?php echo $row['subjects'];?>
 					</td>
 					</tr>
 				<?php

@@ -16,7 +16,7 @@ include "../staff/nav.php";
 <body>
 <div class="panel panel-default container">
 <div class="panel-heading">
-	<h1 style="text-align: center;background-color: black;width: 1100px;height: 60px;color: white;"> ATTENDENCE REPORT</h1>
+	<h1 style="text-align: center;background-color: black;width: 1100px;height: 60px;color: white;"> ATTENDANCE REPORT</h1>
 </div>	
 <div class="panel-body">
 <form action="" method="POST" style="margin-top: -1px;">
@@ -31,9 +31,10 @@ include "../staff/nav.php";
 <option value="12th">12TH STD</option>
 <option value="neet">NEET</option>
 <option value="jee">JEE</option>
-</select><br>
-	<input type="submit" name="filter_value" class="btn btn-warning" value="generate report" style="margin-left: 970px;margin-top: -120px;">
-	
+</select>
+<div>
+<input type="submit" name="filter_value" class="btn btn-warning" value="generate report" style="margin-left: 970px;margin-top: -70px;" id="report">
+</div>	
 	<table class="table table-bordered">
 		
 		<thead>

@@ -205,7 +205,7 @@ a {
             <nav class="nav">
                 <div id="page-wrapper">
                  <a href="" class="nav__logo">
-                        <img src="../staff/logo.png" alt="" class="nav__logo-icon">
+                        <img src="../staff/logo1.png" alt="" class="nav__logo-icon">
                         <span class="nav__logo-text"></span>
                     </a>
 
@@ -215,35 +215,35 @@ a {
                       <ul class="nav__list">
                         <a href="course.php" class="nav__link">
                         <i class='bx bx-book-alt nav__icon'></i>
-                            <span class="nav__text">COURSE 
-                            MANAGEMENT</span>
+                            <span class="nav__text">Course<br>
+                             Management</span>
 
                         </a>
                         <a href="student_attendance.php" class="nav__link">
                             <i class='bx bx-user nav__icon' ></i>
-                            <span class="nav__text">STUDENT 
-                            ATTENDENCE</span>
+                            <span class="nav__text">Student<br>
+                             Attendance</span>
                         </a>
                         <a href="announcement.php" class="nav__link">
                             <i class='bx bx-bell nav__icon' ></i>
-                            <span class="nav__text">ANNOUNCEMENT</span>
+                            <span class="nav__text">Announcement</span>
                         </a>
                         <a href="liveclasses.php" class="nav__link">
                             <i class='bx bx-slideshow nav__icon'></i>
-                            <span class="nav__text">LIVE<br>
-                            CLASSES</span>
+                            <span class="nav__text">Live<br>
+                             Classes</span>
                         </a>
                         <a href="mark_uptation.php" class="nav__link">
                             <i class='bx bx-notepad nav__icon'></i>
-                              <span class="nav__text">STUDENT<br>
-                               MARKS</span>
+                              <span class="nav__text">Student<br>
+                               Mark</span>
                         </a>
                         <a href="staff_fee.php" class="nav__link">
                             <i class='bx bx-money nav__icon' ></i>
-                            <span class="nav__text">FEES<br> 
-                            DETAILS</span>
+                            <span class="nav__text">Fees<br> 
+                            details</span>
                         </a>
-                         <a href="" class="nav__link">
+                         <a href="../staff/dash_board1.php" class="nav__link">
                             <i class='bx bxs-report nav__icon' ></i>
                             <span class="nav__text">Report
                           </span>

@@ -7,17 +7,19 @@ if(isset($_POST['login']))
   $email=$_POST['email'];
    $password=$_POST['password'];
    $role=$_POST['role'];
-   $query="SELECT username FROM registration WHERE email='$email' AND password='$password' AND role='$role'";
+   $query="SELECT username,email FROM registration WHERE email='$email' 
+   AND password='$password' AND role='Teacher'";
    $result=mysqli_query($con,$query);
    while($row=mysqli_fetch_array($result)){
       $username=$row['username'];
+       $e=$row['email'];
    }
    if($result)
    {
-    $_SESSION['email']=$email;
+    $_SESSION['email']=$e;
     $_SESSION['username']=$username;
     $_SESSION['position']=$role;
-    header("location:nav.php");
+    header("location:dash_board.php");
    }
    else
    {
